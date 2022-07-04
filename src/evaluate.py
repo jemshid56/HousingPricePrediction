@@ -48,3 +48,6 @@ def evaluate():
       "MAE": mae
     }
     json.dump(scores, f, indent=4)
+ 
+if __name__=="__main__":
+    evaluate()
