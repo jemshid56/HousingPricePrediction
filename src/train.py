@@ -21,3 +21,6 @@ def train():
   regressor.fit(xtrain, ytrain)
 
   pickle.dump(regressor, open(model_file, 'wb'))
+ 
+if __name__=="__main__":
+    train()
