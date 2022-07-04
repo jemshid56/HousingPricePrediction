@@ -30,5 +30,7 @@ def prepare_data():
   
   return train_test_split(x, y, test_size =0.2, random_state = 0)
 
-xtrain, xtest, ytrain, ytest = prepare_data()
+ 
+if __name__=="__main__":
+    xtrain, xtest, ytrain, ytest = prepare_data()
 
