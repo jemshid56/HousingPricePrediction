@@ -1,0 +1,36 @@
+schema: '2.0'
+stages:
+  prepare_data:
+    cmd: python src/prepare_data.py
+    deps:
+    - path: src/prepare_data.py
+      md5: f783de06865d322604010f62c0735c8f
+      size: 868
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: src/prepare_data.py
+      md5: f783de06865d322604010f62c0735c8f
+      size: 868
+    - path: src/train.py
+      md5: ba6dab7903fe595875958f1c68c8bdbd
+      size: 618
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - path: saved_models/housing_model.h5
+      md5: d1b4d3b73ec3a8c288c71d52d4fc4e34
+      size: 587
+    - path: src/evaluate.py
+      md5: 828be4b253577413c617c9af77bf8f19
+      size: 1409
+    - path: src/prepare_data.py
+      md5: f783de06865d322604010f62c0735c8f
+      size: 868
+    outs:
+    - path: report/prediction.png
+      md5: 37f210e3cfe439c5ce9c0db487dd87be
+      size: 37569
+    - path: report/score.json
+      md5: 94bca7ff1d00c08158200294ba9962e9
+      size: 67

@@ -8,7 +8,7 @@ Original file is located at
 """
 
 from sklearn.linear_model import LinearRegression
-from src.prepare_data import prepare_data
+from prepare_data import prepare_data
 
 import pickle
 

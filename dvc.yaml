@@ -1,0 +1,24 @@
+stages:
+  prepare_data:
+    cmd: python src/prepare_data.py
+    deps:
+    - src/prepare_data.py
+
+  train:
+    cmd: python src/train.py 
+    deps:
+    - src/train.py
+    - src/prepare_data.py
+    
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - saved_models/housing_model.h5
+    - src/evaluate.py
+    - src/prepare_data.py
+    outs:
+    - report/prediction.png
+   
+    metrics:
+    - report/score.json:
+        cache: false
