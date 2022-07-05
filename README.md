@@ -1,5 +1,11 @@
 # HousingPricePrediction
 
+The predicts the housing price using California Housing dataset. 
+ML Model used in LinearRegression. Metrics are MAE and MSE.
+The repository is configured with DVC and CML. 
+The github actions will be carried out upon code push.
+
+
 Following is the file structure
 
 ## src -- Source code direcory
