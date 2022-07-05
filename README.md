@@ -44,3 +44,6 @@ DVC has 3 stages
 - It successfully ran the code
 - Able to perform DVC operations and Git operations from cloud.
 - The same can be used in future for web app deployment.
+
+
+![image](https://user-images.githubusercontent.com/47142192/177395538-a507c2d3-f672-43fe-bdb3-920df5801b38.png)
